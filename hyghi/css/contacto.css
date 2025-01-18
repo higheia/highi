@@ -1,0 +1,138 @@
+/* Fuente general del sitio */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 60px; /* Ajuste del margen superior para el contenido, evitando que el video pase el navbar */
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #0b2826;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000; /* Asegurarse de que el navbar esté por encima del contenido */
+  }
+  
+  .navbar-brand span {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .navbar-logo {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  /* Estilo de los enlaces del menú */
+  .nav-link {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    margin: 0 10px;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+    color: #f0f0f0;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  /* Contact Form Section */
+  .contact-form-section .card {
+    margin-top: 30px;
+  }
+  
+  .contact-form-section .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .contact-form-section .form-control {
+    margin-top: 10px;
+  }
+  
+  /* Google Maps Section */
+  .google-maps-section .card {
+    margin-top: 30px;
+  }
+  
+  /* Social Media Section */
+  .social-media-section .social-icon {
+    color: #0b2826;
+    transition: color 0.3s ease;
+  }
+  
+  .social-media-section .social-icon:hover {
+    color: #007bff;
+  }
+  
+
+.footer {
+    background-color: #f1f5f9; /* Color de fondo gris claro */
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+  
+  .footer-logo-img {
+    height: 4rem; /* Ajusta el tamaño del logo de la empresa */
+    width: auto;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #e6fffa;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer-social a:hover {
+    background-color: #2d3748;
+    color: white;
+  }
+  
+  .footer-social i {
+    font-size: 1.5rem; /* Tamaño de los íconos */
+  }
+  
+  .footer-text {
+    color: #2d3748;
+    font-size: 0.875rem;
+  }
+  
+  .footer-text p {
+    margin: 0;
+  }

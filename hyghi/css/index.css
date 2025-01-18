@@ -1,0 +1,522 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 60px; /* Ajuste del margen superior para el contenido, evitando que el video pase el navbar */
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #f2fbf8;
+    padding: 0; /* Eliminar el padding en el navbar */
+    position: absolute; /* Fijar el navbar en la parte superior */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000; /* Asegurarse de que el navbar esté por encima del contenido */
+  }
+  
+  .navbar-brand span {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .navbar-logo {
+    height: 70px;
+    margin-right: 10px;
+  }
+  
+  /* Estilo de los enlaces del menú */
+  .nav-link {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    margin: 0 10px;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+    color: #f0f0f0;
+  }
+  
+  /* Estilo para enlaces deshabilitados */
+  .nav-link.disabled {
+    color: white !important;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  
+  /* Responsive para ícono de hamburguesa */
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .navbar-nav .nav-link {
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+  }
+  
+  /* Estilos para el video de fondo */
+  #bg-video {
+    position: fixed; /* Fija el video al fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que el video cubra toda la pantalla */
+    z-index: -1; /* Asegura que el video quede atrás del contenido */
+  }
+  
+  /* Ajusta el contenedor del video para que no pase el navbar */
+  .video-background {
+    position: relative;
+    z-index: -1; /* Asegura que el video quede atrás del navbar */
+  }
+  
+  /* Estilos del logo y el contenido */
+  .container-facu {
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2; /* Para que el contenido esté encima del video */
+  }
+  
+  .tex {
+    font-weight: 600; /* Peso de fuente más pesado */
+    font-size: 116px; /* Tamaño de fuente grande */
+    color: #e9f1eb; /* Color claro, puedes usar #fff para blanco puro */
+  }
+  
+  /* Contenedor con texto a la izquierda y imagen a la derecha */
+  .container-left-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .text-left {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .image-right {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .small-image {
+    width: 80%; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Contenedor con imagen a la izquierda y texto a la derecha */
+  .container-right-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .image-left {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .text-right {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    /* En pantallas pequeñas, las imágenes ocupan el 100% del ancho */
+    .small-image {
+      width: 100%;
+    }
+  
+    /* En pantallas pequeñas, las columnas se apilan verticalmente */
+    .container-left-right,
+    .container-right-left {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  /* Colores de fondo */
+  .f {
+    background-color: #bfdbd3;
+  }
+  
+  .g {
+    background-color: #f2fbf8;
+  }
+  
+  .c {
+    background-color: #73beae;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #f1f5f9; /* Color de fondo gris claro */
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+  
+  .footer-logo-img {
+    height: 4rem; /* Ajusta el tamaño del logo de la empresa */
+    width: auto;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #e6fffa;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer-social a:hover {
+    background-color: #2d3748;
+    color: white;
+  }
+  
+  .footer-social i {
+    font-size: 1.5rem; /* Tamaño de los íconos */
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #2d3748;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #2b6cb0;
+  }
+  
+  .footer-text {
+    color: #2d3748;
+    font-size: 0.875rem;
+  }
+  
+  .footer-text p {
+    margin: 0;
+  }
+  
+  .footer-hygeia-logo {
+    margin-top: 1rem; /* Espacio entre el texto y el logo de HYGEIA */
+  }
+  
+  .footer-hygeia-logo-img {
+    height: 3rem; /* Ajusta el tamaño del logo de HYGEIA */
+    width: auto;
+  }
+  
+  /* Card container */
+  .card-cont {
+    background-color: #dcefdf;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Tabs */
+  .tabs {
+    display: flex;
+    background-color: #dcebe7; /* Verde oscuro */
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    background: none;
+    color: #12211f; /* Verde claro */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .tab.active {
+    background-color: #dcebe7; /* Verde activo */
+    color: white;
+  }
+  
+  .tab:hover {
+    background-color: #dcebe7; /* Verde más oscuro para hover */
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .stat-item h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+    color: #12211f; /* Verde claro */
+  }
+  
+  .stat-item p {
+    font-size: 0.875rem;
+    color: #12211f; /* Verde más claro */
+    margin: 8px 0 0;
+  }
+  
+  /* Card styles */
+  .cs {
+    width: 100%; /* Ancho fijo */
+    height: 300px; /* Altura fija */
+    object-fit: cover; /* Mantiene la proporción de la imagen sin distorsión */
+  }
+  
+  .tat {
+    background-color: #dcefdf;
+  }
+  
+  /* Our professionals section */
+  /* Estilos para la sección de profesionales */
+  .our-professionals {
+    background-color: #f2fbf8; /* Fondo acorde con tu esquema de colores */
+    padding: 60px 0;
+  }
+  
+  .our-professionals .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .our-professionals .card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .our-professionals .card-body {
+    padding: 20px;
+  }
+  
+  .our-professionals .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .our-professionals .card-text {
+    color: #6c757d;
+  }
+  
+  /* Separador */
+  .separator {
+    height: 50px;
+  }
+  
+  .pi {
+    width: 100%;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #f1f5f9; /* Color de fondo gris claro */
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+  
+  .footer-logo-img {
+    height: 4rem; /* Ajusta el tamaño del logo de la empresa */
+    width: auto;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #e6fffa;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer-social a:hover {
+    background-color: #2d3748;
+    color: white;
+  }
+  
+  .footer-social i {
+    font-size: 1.5rem; /* Tamaño de los íconos */
+  }
+  
+  .footer-text {
+    color: #2d3748;
+    font-size: 0.875rem;
+  }
+  
+  .footer-text p {
+    margin: 0;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  .animate__fadeInUp {
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .animate__fadeInLeft {
+    animation: fadeInLeft 1s ease-in-out;
+  }
+  
+  .animate__fadeInRight {
+    animation: fadeInRight 1s ease-in-out;
+  }
+  
+  .animate__zoomIn {
+    animation: zoomIn 1s ease-in-out;
+  }
+  
+  /* Animaciones para las cards al tocarlas */
+  .card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Animaciones para el logo al pasar el cursor */
+  .navbar-logo:hover {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Animaciones para el logo al pasar el cursor */
+  .logo-hover:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Estilos para las tarjetas */
+  .cards-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* Elimina el espacio entre las tarjetas */
+  }
+  
+  .card-item {
+    margin: 0; /* Elimina el margen de las tarjetas */
+    padding: 0; /* Elimina el padding de las tarjetas */
+  }
+  
+  .card-item .row {
+    margin: 0; /* Elimina el margen de las filas */
+  }
+  
+  .card-item .col-12 {
+    padding: 0; /* Elimina el padding de las columnas */
+  }
+  
+  .container-ss{
+    width: 100%;
+    box-sizing: border-box;
+    
+  
+  }
+  
+  
